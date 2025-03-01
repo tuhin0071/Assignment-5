@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>DavBoard</title>
+
+      <!-- tailwind -->
+      <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css" rel="stylesheet" type="text/css" />
+      <script src="https://cdn.tailwindcss.com"></script>
+
+
+
+
+
+      <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+      
+                        screens: {
+              'xs': '400px',  
+              'sm': '640px',  
+              'md': '768px',  
+              'lg': '1024px', 
+              'xl': '1280px', 
+              '2xl': '1536px', 
+              '3xl': '1800px', 
+                        },
+                        fontFamily: {
+                              Poppins: [ "poppins", "serif"]
+              },
+                        
+                        colors: {
+                            primary: "#179800", 
+                            secondary: "#EFEBE3",
+                            darkBlue: "#1e3a8a",
+                            
+                        },
+                        backgroundImage: {
+                          'third': "linear-gradient(to bottom, #17e663, #b0f5c9)" 
+                      }
+      
+                        
+                   
+                  }
+                    
+                }
+            }
+        </script>
+      
+
+
+
+
+
+      <!-- font -->
+       <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body class="font-oppins bg-slate-100  w-screen  p-7 ">
+     
+      <section class="max-w-[1538px] mx-auto">
+
+            <nav  class="max-w-[1538px] flex justify-between py-2 bg-white  rounded-full px-7">
+
+                     <div class="flex justify-center items-center gap-1">
+                        <img src="assets/logo.png" alt="">
+                        <h2 class="text-3xl">
+                              Dev<span class="font-bold">Board</span>
+                        </h2>
+                     </div>
+
+
+                   <div class="flex justify-center items-center">
+                        <div class="flex justify-center items-center w-32 h-12 rounded-3xl gap-2 bg-slate-400 mx-6">
+                              <img src="assets/checkbox.png" alt="" class="w-7 h-7">
+                              <p class="text-3xl font-bold" id="plussection">23</p>
+                        </div>
+                    <div id="colorBtn" class="bg-slate-400 h-14 w-14 rounded-full flex items-center justify-center  ">
+                        <img src="assets/theme-btn.png" alt="" class="h-8 w-8">
+                    </div>
+                   </div>
+            </nav>
+
+
+
+
+            <section class="p-8">
+<!-- task-section -->
+  <div class="flex  gap-5  ">
+<!-- 1st section -->
+<div class="w-3/4">
+<div class="flex items-center gap-3 ">
+    <div class="flex items-center  gap-3 h-32 bg-red-500 w-1/4 rounded-lg px-4">
+        <div class="w-16 h-14 bg-white rounded-full flex justify-center items-center">
+            <img src="assets/checkbox.png" alt="">
+         </div>
+    
+         <div>
+            <p class="text-xl">Task Assigned </p>
+            <h2 class="text-3xl font-bold"  id="minussection">05</h2>
+         </div>
+    </div>
+     
+    <div class="h-32 flex justify-start items-center gap-2  bg-gradient-to-br from-[rgb(55,82,253)] via-[rgb(108,127,250)] to-[rgb(155,168,248)] w-2/4 rounded-lg px-4">
+    
+        <img src="assets/board.png" alt="">
+    
+        <div>
+            <p class=" text-2xl font-bold text-white">Discover Something <br> New Today!</p>
+        </div>
+    
+     </div>
+    
+     <div class="h-32 flex justify-center items-center gap-8  bg-red-500  w-1/4 rounded-lg">
+        <img src="assets/calender.png" alt="" srcset="">
+        <div>
+            <p class="text-xl font-bold">
+                Wed <br>
+                March 1 2025
+            </p>
+        </div>
+        </div>
+</div>
+
+
+<!-- 2nd-section -->
+
+<div  class=" grid grid-cols-3 gap-5 mt-8   border-t-4 border-dashed border-gray-500 pt-9">
+
+    <div class=" bg-blue-200 rounded-xl ">
+        <div class="card-body gap-7">
+           <div class="bg-white h-8 w-24 rounded-2xl pt-1 ">
+            <p class="text-center">ShopEase</p>
+           </div>
+
+            <h1 class="text-2xl font-bold">Fix Mobile Button Issue </h1>
+            <div class="w-7/8  overflow-hidden text-ellipsis whitespace-nowrap  bg-gray-200 p-4">
+                <p class="text-gray-600 text-lg">Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly </p>
+            </div>
+
+          
+        <div class="flex  justify-between gap-">
+            <div>
+                <p class="text-gray-600">Deadline</p>
+                <p class="text-xl font-bold">21 March 2025</p>
+            </div>
+                    
+                     <button class="btn bg-purple-700" data-value="1">Completed</button>
+        </div>
+        </div>
+       
+     
+</div>
+
+
+
+<div class=" bg-blue-200 rounded-xl ">
+    <div class="card-body gap-7">
+       <div class="bg-white h-8 w-24 rounded-2xl pt-1 ">
+        <p class="text-center">ShopEase</p>
+       </div>
+
+        <h1 class="text-2xl font-bold">Fix Mobile Button Issue </h1>
+        <div class="w-7/8  overflow-hidden text-ellipsis whitespace-nowrap  bg-gray-200 p-4">
+            <p class="text-gray-600 text-lg">Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly </p>
+        </div>
+
+      
+    <div class="flex  justify-between gap-">
+        <div>
+            <p class="text-gray-600">Deadline</p>
+            <p class="text-xl font-bold">21 March 2025</p>
+        </div>
+                
+                 <button class="btn bg-purple-700" data-value="1">Completed</button>
+    </div>
+    </div>
+   
+ 
+</div>
+
+
+<div class=" bg-blue-200 rounded-xl ">
+    <div class="card-body gap-7">
+       <div class="bg-white h-8 w-24 rounded-2xl pt-1 ">
+        <p class="text-center">ShopEase</p>
+       </div>
+
+        <h1 class="text-2xl font-bold " >Fix Mobile Button Issue </h1>
+        <div class="w-7/8  overflow-hidden text-ellipsis whitespace-nowrap  bg-gray-200 p-4">
+            <p class="text-gray-600 text-lg">Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly </p>
+        </div>
+
+      
+    <div class="flex  justify-between gap-">
+        <div>
+            <p class="text-gray-600">Deadline</p>
+            <p class="text-xl font-bold">21 March 2025</p>
+        </div>
+                
+                 <button class="btn bg-purple-700" data-value="1">Completed</button>
+    </div>
+    </div>
+   
+ 
+</div>
+
+
+<div class=" bg-blue-200 rounded-xl ">
+    <div class="card-body gap-7">
+       <div class="bg-white h-8 w-24 rounded-2xl pt-1 ">
+        <p class="text-center">ShopEase</p>
+       </div>
+
+        <h1 class="text-2xl font-bold">Fix Mobile Button Issue </h1>
+        <div class="w-7/8  overflow-hidden text-ellipsis whitespace-nowrap  bg-gray-200 p-4">
+            <p class="text-gray-600 text-lg">Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly </p>
+        </div>
+
+      
+    <div class="flex  justify-between gap-">
+        <div>
+            <p class="text-gray-600">Deadline</p>
+            <p class="text-xl font-bold">21 March 2025</p>
+        </div>
+                
+                 <button class="btn bg-purple-700" data-value="1">Completed</button>
+    </div>
+    </div>
+   
+ 
+</div>
+
+
+
+<div class=" bg-blue-200 rounded-xl ">
+    <div class="card-body gap-7">
+       <div class="bg-white h-8 w-24 rounded-2xl pt-1 ">
+        <p class="text-center">ShopEase</p>
+       </div>
+
+        <h1 class="text-2xl font-bold">Fix Mobile Button Issue </h1>
+        <div class="w-7/8  overflow-hidden text-ellipsis whitespace-nowrap  bg-gray-200 p-4">
+            <p class="text-gray-600 text-lg">Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly </p>
+        </div>
+
+      
+    <div class="flex  justify-between gap-">
+        <div>
+            <p class="text-gray-600">Deadline</p>
+            <p class="text-xl font-bold">21 March 2025</p>
+        </div>
+                
+                 <button class="btn bg-purple-700" data-value="1">Completed</button>
+    </div>
+    </div>
+   
+ 
+</div>
+
+
+<div class=" bg-blue-200 rounded-xl ">
+    <div class="card-body gap-7">
+       <div class="bg-white h-8 w-24 rounded-2xl pt-1 ">
+        <p class="text-center">ShopEase</p>
+       </div>
+
+        <h1 class="text-2xl font-bold">Fix Mobile Button Issue </h1>
+        <div class="w-7/8  overflow-hidden text-ellipsis whitespace-nowrap  bg-gray-200 p-4">
+            <p class="text-gray-600 text-lg">Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly </p>
+        </div>
+
+      
+    <div class="flex  justify-between gap-">
+        <div>
+            <p class="text-gray-600">Deadline</p>
+            <p class="text-xl font-bold">21 March 2025</p>
+        </div>
+                
+                 <button class="btn bg-purple-700" data-value="1">Completed</button>
+    </div>
+    </div>
+   
+ 
+</div>
+</div>
+</div>
+
+
+
+ 
+
+
+<!-- activity-log-section -->
+                     <div class="w-1/4 flex flex-col justify-start items-center gap-6 bg-white rounded-2xl ">
+                            <div class="flex gap-5 mt-6">
+                                <img src="assets/activity.png" alt="" srcset="" class="w-9 h-10">
+                                <h1 class="text-2xl">Activity Log</h1>
+                            </div>
+
+                            <button class=" bg-purple-700 text-white text-xl p-3 rounded-2xl px-10"  >Clear history</button>
+
+
+
+                       
+
+                          
+
+                     </div>
+</div>
+            </section>
+
+      </section>
+
+      
+<script src="devboar.js"></script>
+<script src="deboardbtn.js"></script>
+</body>
+</html>
+
+
+
