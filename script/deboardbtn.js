@@ -18,9 +18,23 @@ buttons.forEach(button => {
 
             let currentMinusDiv = parseInt(minusDiv.innerText);
             let currentPlusDiv = parseInt(plusDiv.innerText);
-            minusDiv.innerText = currentMinusDiv - value;
+            minusDiv.innerText = (currentMinusDiv - value).toString().padStart(2, '0');;
             plusDiv.innerText = currentPlusDiv - value;
             button.disabled = true;
+
+            let now = new Date();
+            let hours = now.getHours().toString().padStart(2, '0');
+            let minutes = now.getMinutes().toString().padStart(2, '0');
+            let seconds = now.getSeconds().toString().padStart(2, '0');
+            let timeString = `${hours}:${minutes}:${seconds}`;
+    
+             
+        const activityLog = document.getElementById("activity-log");
+        const div = document.createElement("div");
+        div.classList.add("bg-red-300", "p-4", "rounded-2xl");
+        div.innerHTML = `<p class="text-l">You have completed the task at ${timeString}</p>`;
+        activityLog.append(div);
+
 
       })
 
