@@ -28,11 +28,20 @@ buttons.forEach(button => {
             let seconds = now.getSeconds().toString().padStart(2, '0');
             let timeString = `${hours}:${minutes}:${seconds}`;
     
-             
+
+
+            let parentDiv = button.closest("div");
+            let heading = parentDiv.querySelector("h1"); 
+    
+            
+            if (heading) {
+                heading = heading.innerText;  
+            };
         const activityLog = document.getElementById("activity-log");
+        
         const div = document.createElement("div");
-        div.classList.add("bg-red-300", "p-4", "rounded-2xl");
-        div.innerHTML = `<p class="text-l">You have completed the task at ${timeString}</p>`;
+        div.classList.add("bg-red-300", "p-4", "rounded-2xl" ,"mt-4");
+        div.innerHTML = `<p class="text-l ">You have completed the task:<Strong> ${heading} </Strong> at ${timeString}</p>`;
         activityLog.append(div);
 
 
