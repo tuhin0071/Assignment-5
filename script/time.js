@@ -2,7 +2,7 @@ function updateDateTime() {
       let now = new Date();
   
 
-      const weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+      const weekdays = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
       const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
   
       
@@ -19,5 +19,24 @@ function updateDateTime() {
   }
   
   
-  updateDateTime();
-  setInterval(updateDateTime, 1000);
+  
+  setInterval(updateDateTime(), 1000);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
