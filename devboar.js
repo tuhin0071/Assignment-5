@@ -7,3 +7,6 @@ document.getElementById("colorBtn").addEventListener("click", function(){
 
 
 
+const newPageBtn = document.getElementById("newpagebtn").addEventListener("click", function(){
+      console.log(window.location.href="qu.html")
+})
